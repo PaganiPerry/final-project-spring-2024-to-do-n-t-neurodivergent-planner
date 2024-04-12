@@ -100,3 +100,91 @@ h1 {
 	font-weight: bold;
  }
 
+
+ *{
+	padding: 0;
+	margin: 0;
+ }
+
+ body{
+	background: #f1f1f1;
+	background-image: linear-gradient(
+		 90deg,
+		 transparent 50px,
+		 #ffb4b8 50px,
+		 #ffb4b8 52px,
+		 transparent 52px
+	  ),
+	  linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+	  background-size: 100% 30px;
+	  font-family: "Architects Daughter";
+	  font-size: 24px;
+ }
+
+ .main-container{
+	width: 95%;
+	margin: auto;
+ }
+
+ button {
+	font-family: monospace;
+	font-size: 1.5rem;
+	color: #FAFAFA;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: 2px solid #FAFAFA;
+	background: #252525;
+	box-shadow: 3px 3px #fafafa;
+	cursor: pointer;
+	margin: 35px 0;
+ }
+
+ button:active {
+	box-shadow: none;
+	transform: translate(3px, 3px);
+ }
+
+ .container1{
+	margin-left: 5%;
+ }
+
+ .container2{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-left: 5%;
+ }
+
+ .container3{
+	display: none;
+	position: absolute;
+	top: 26%;
+	left: 40%;
+ }
+
+ textarea{
+	box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+	outline: none;
+	border: none;
+	width: 275px;
+	heightL 275px;
+	padding: 40px 25px 25px 25px;
+ }
+
+ svg{
+	color: gray;
+ }
+
+ #check-icon{
+	position: absolute;
+	right: 15%;
+	bottom: 83%;
+ }
+
+ #x-icon{
+	position: absolute;
+	right: 5%;
+	top: 4%;
+ }
