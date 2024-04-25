@@ -35,156 +35,254 @@ h1 {
 }
 
 
- .button-link-Fine {
-	transition: all 0.5s;
-	font-size: 17px;
-	padding: 1ch 2ch;
+ /* styles.css */
+/* General styling for the entire page */
+body {
+	font-family: "Alata", sans-serif;
 	background-color: white;
-	color: #000;
-	font-family: Roboto, sans-serif;
-	border: none;
-	border-radius: 2px;
-	box-shadow: 2px 2px 0px hsl(0, 0%, 90%),
-	  4px 4px 0px hsl(0, 0%, 80%),
-	  6px 6px 0px hsl(0, 0%, 70%),
-	  8px 8px 0px hsl(0, 0%, 60%),
-	  10px 10px 0px hsl(0, 0%, 50%),
-	  12px 12px 0px hsl(0, 0%, 40%),
-	  14px 14px 0px hsl(0, 0%, 30%),
-	  16px 16px 0px hsl(0, 0%, 20%),
-	  18px 18px 0px hsl(0, 0%, 10%);
- }
-
- .button-link-Fine:hover {
-	background-color: hsl(0, 0%, 50%);
-	color: #fff;
-	box-shadow: none;
- }
-
-
- .button-link-Later {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
- }
-
-
- .button-link-Tomorrow  {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
- }
-
-
- .button-link-InABit {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
- }
-
-
- *{
-	padding: 0;
 	margin: 0;
- }
+}
 
- body{
-	background: #f1f1f1;
-	background-image: linear-gradient(
-		 90deg,
-		 transparent 50px,
-		 #ffb4b8 50px,
-		 #ffb4b8 52px,
-		 transparent 52px
-	  ),
-	  linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
-	  background-size: 100% 30px;
-	  font-family: "Architects Daughter";
-	  font-size: 24px;
- }
+.wrapper {
+	max-width: 1100px;
+	margin: 15px center;
+}
 
- .main-container{
-	width: 95%;
-	margin: auto;
- }
-
- button {
-	font-family: monospace;
-	font-size: 1.5rem;
-	color: #FAFAFA;
-	text-transform: uppercase;
-	padding: 10px 20px;
-	border-radius: 10px;
-	border: 2px solid #FAFAFA;
-	background: #252525;
-	box-shadow: 3px 3px #fafafa;
-	cursor: pointer;
-	margin: 35px 0;
- }
-
- button:active {
-	box-shadow: none;
-	transform: translate(3px, 3px);
- }
-
- .container1{
-	margin-left: 5%;
- }
-
- .container2{
+/* Calendar container */
+.container-calendar {
+	background: #ffffff;
+	padding: 15px;
+	max-width: 900px;
+	margin: 250px auto; /*made it centered in the page*/
+	overflow: auto;
 	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	margin-left: 5%;
- }
+	justify-content: space-between;
+  border: 2.5px solid black; /* Draggable border */
+  box-shadow: 2px 5px 4px rgba(0,0,0,0.5);
+  border-radius: 20px;
+      background: linear-gradient(270deg, #85C1E9, #E59866, #F2F3F4);
+    background-size: 600% 600%;
+    animation: Gradient 15s ease infinite;
+}
 
- .container3{
-	display: none;
-	position: absolute;
-	top: 26%;
-	left: 40%;
- }
+/* Define the animation keyframes */
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
- textarea{
-	box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
-	outline: none;
+
+/* Event section styling */
+#event-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+  border: 2.5px solid black; /* Draggable border */
+  border-radius: 20px;
+}
+
+.container-calendar #left h1 {
+	color: #0032a9;
+	text-align: center;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 10px 0;
+  border: 2.5px solid black; /* Draggable border */
+  border-radius: 20px;
+}
+
+#event-section h3 {
+	color: #0032a9;
+	font-size: 18px;
+	margin: 0;
+}
+
+#event-section input[type="date"],
+#event-section input[type="text"] {
+	margin: 10px 0;
+	padding: 5px;
+	width: 80%;
+  border-radius: 10px;
+  font-family: "Alata", sans-serif;
+}
+
+#event-section button {
+	background: #F57C00;
+	color: white;
 	border: none;
-	width: 275px;
-	heightL 275px;
-	padding: 40px 25px 25px 25px;
- }
+	padding: 5px 10px;
+	cursor: pointer;
+  border-radius: 5px;
+}
 
- svg{
-	color: gray;
- }
+.event-marker {
+	position: relative;
+}
 
- #check-icon{
+.event-marker::after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	border-radius: 50%;
 	position: absolute;
-	right: 15%;
-	bottom: 83%;
- }
+	bottom: 0;
+	left: 0;
+}
 
- #x-icon{
+/* event tooltip styling */
+.event-tooltip {
 	position: absolute;
-	right: 5%;
-	top: 4%;
- }
+	background-color: rgba(234, 232, 232, 0.763);
+	color: black;
+	padding: 10px;
+	border-radius: 4px;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	transition: all 0.3s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.event-marker:hover .event-tooltip {
+	display: block;
+}
+
+/* Reminder section styling */
+#reminder-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 2px solid black;
+  border-radius: 20px;
+}
+
+#reminder-section h3 {
+	color: #0032a9;
+	font-size: 18px;
+	margin: 0;
+}
+
+#reminderList {
+	list-style: none;
+	padding: 0;
+}
+
+#reminderList li {
+	margin: 5px 0;
+	font-size: 16px;
+}
+
+/* Style for the delete buttons */
+.delete-event {
+	background: rgb(237, 19, 19);
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left: 10px;
+	align-items: right;
+  border-radius: 5px;
+}
+
+/* Buttons in the calendar */
+.button-container-calendar button {
+	cursor: pointer;
+	background: #F57C00;
+	color: #fff;
+	border: 2px solid #F57C00;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+/* Calendar table */
+.table-calendar {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+	padding: 5px;
+	border: 1px solid #e2e2e2;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* Date picker */
+.date-picker.selected {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	outline: 1px dashed #00BCD4;
+}
+
+.date-picker.selected span {
+	border-bottom: 2px solid currentColor;
+}
+
+/* Day-specific styling */
+.date-picker:nth-child(1) {
+	color: red;
+	/* Sunday */
+}
+
+.date-picker:nth-child(6) {
+	color: green;
+	/* Friday */
+}
+
+/* Hover effect for date cells */
+.date-picker:hover {
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+/* Header for month and year */
+#monthAndYear {
+	text-align: center;
+	margin-top: 0;
+}
+
+/* Navigation buttons */
+.button-container-calendar {
+	position: relative;
+	margin-bottom: 1em;
+	overflow: hidden;
+	clear: both;
+}
+
+#previous {
+	float: left;
+}
+
+#next {
+	float: right;
+}
+
+/* Footer styling */
+.footer-container-calendar {
+	margin-top: 1em;
+	border-top: 1px solid #dadada;
+	padding: 10px 0;
+}
+
+.footer-container-calendar select {
+	cursor: pointer;
+	background: #ffffff;
+	color: #585858;
+	border: 1px solid #bfc5c5;
+	border-radius: 3px;
+	padding: 5px 1em;
+}

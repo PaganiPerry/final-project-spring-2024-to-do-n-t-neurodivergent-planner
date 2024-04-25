@@ -5,10 +5,6 @@ Try changing the color from blue to red in the
 primary color variable below.
 */
 
-:root {
-	--color-primary: blue;
-	--color-secondary: #c00;
-}
 
 /*
 CSS doesn't allow variables to be used in media
@@ -22,9 +18,6 @@ to help you out.
 	--size-xl: 1200px;
 */
 
-h1 {
-	color: var(--color-primary);
-}
 
 /* This uses the same value as --size-xs. */
 @media screen and (width >= 320px) {
@@ -35,68 +28,173 @@ h1 {
 }
 
 
- .button-link-Fine {
-	transition: all 0.5s;
-	font-size: 17px;
-	padding: 1ch 2ch;
-	background-color: white;
-	color: #000;
-	font-family: Roboto, sans-serif;
+/* Set up the animated background */
+body {
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(270deg, #0000FF, #FFA500, #FFFFFF);
+	background-size: 600% 600%;
+	animation: Gradient 15s ease infinite;
+ }
+
+ /* Define the animation keyframes */
+ @keyframes Gradient {
+	  0% {
+			background-position: 0% 50%;
+	  }
+	  50% {
+			background-position: 100% 50%;
+	  }
+	  100% {
+			background-position: 0% 50%;
+	  }
+ }
+
+
+ .main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
+ }
+
+ .up, .down {
+	display: flex;
+	gap: 0.5em;
+ }
+
+ .center-card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+ }
+ .center-card-button {
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background-color: #f0f0f0;
 	border: none;
-	border-radius: 2px;
-	box-shadow: 2px 2px 0px hsl(0, 0%, 90%),
-	  4px 4px 0px hsl(0, 0%, 80%),
-	  6px 6px 0px hsl(0, 0%, 70%),
-	  8px 8px 0px hsl(0, 0%, 60%),
-	  10px 10px 0px hsl(0, 0%, 50%),
-	  12px 12px 0px hsl(0, 0%, 40%),
-	  14px 14px 0px hsl(0, 0%, 30%),
-	  16px 16px 0px hsl(0, 0%, 20%),
-	  18px 18px 0px hsl(0, 0%, 10%);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	font-size: 24px;
+	color: #333;
+	cursor: pointer;
+	outline: none;
  }
 
- .button-link-Fine:hover {
-	background-color: hsl(0, 0%, 50%);
-	color: #fff;
-	box-shadow: none;
+ .center-card-button:hover {
+	background-color: red;
  }
 
-
- .button-link-Later {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
+ .card1 {
 	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
+	width: 250px;
+	height: 250px;
+	outline: none;
+	background: #0032A9;
+	border-radius: 90px 5px 5px 5px;
+	transition: .2s ease-in-out;
+	border: 1.5px solid black; /* Draggable border */
+	box-shadow: 2px 5px 4px rgba(0,0,0,0.5);
+
  }
 
+ .bi bi-calendar-check {
+	margin-top: 1.5em;
+	margin-left: 1.2em;
+	fill: green;
+ }
 
- .button-link-Tomorrow  {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
+ .card2 {
+	width: 250px;
+	height: 250px;
+	outline: none;
+	background: #EEEEEE;
+	border-radius: 5px 90px 5px 5px;
+	border: 1.5px solid black; /* Draggable border */
+	box-shadow: 2px 5px 4px rgba(0,0,0,0.5);
+	transition: .2s ease-in-out;
+ }
+
+ .bi bi-list-task {
+	margin-top: 1.5em;
+	margin-left: -.9em;
+	fill: #03A9F4;
+ }
+
+ .card3 {
 	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
+	width: 250px;
+	height: 250px;
+	outline: none;
+	background: #212121;
+	border-radius: 5px 5px 5px 90px;
+	border: 1.5px solid black; /* Draggable border */
+	box-shadow: 2px 5px 4px rgba(0,0,0,0.5);
+	transition: .2s ease-in-out;
  }
 
-
- .button-link-InABit {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
+ .bi bi-stickies-fill {
+	margin-top: -.6em;
+	margin-left: 1.2em;
  }
 
+ .card4 {
+	width: 250px;
+	height: 250px;
+	outline: none;
+	background: #F57C00;
+	border-radius: 5px 5px 90px 5px;
+	border: 1.5px solid black; /* Draggable border */
+	box-shadow: 2px 5px 4px rgba(0,0,0,0.5);
+	transition: .2s ease-in-out;
+ }
+
+ .bi bi-alarm-fill {
+	margin-top: -.9em;
+	margin-left: -1.2em;
+	fill: #8c9eff;
+ }
+
+ .card1:hover {
+	cursor: pointer;
+	scale: 1.1;
+	background-color: #cc39a4;
+ }
+
+ .card1:hover .bi bi-calendar-check {
+	fill: white;
+ }
+
+ .card2:hover {
+	cursor: pointer;
+	scale: 1.1;
+	background-color: #03A9F4;
+ }
+
+ .card2:hover .bi bi-list-task {
+	fill: white;
+ }
+
+ .card3:hover {
+	cursor: pointer;
+	scale: 1.1;
+	background-color: black;
+ }
+
+ .card3:hover .bi bi-stickies-fill {
+	fill: white;
+ }
+
+ .card4:hover {
+	cursor: pointer;
+	scale: 1.1;
+	background-color: #8c9eff;
+ }
+
+ .card4:hover .bi bi-alarm-fill {
+	fill: white;
+ }

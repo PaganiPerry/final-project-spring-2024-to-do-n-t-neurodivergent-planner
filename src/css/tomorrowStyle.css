@@ -1,190 +1,234 @@
-/*
-CSS controls the styling of the page.
-You can write a color in directly, or use variables.
-Try changing the color from blue to red in the
-primary color variable below.
-*/
-
-:root {
-	--color-primary: blue;
-	--color-secondary: #c00;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*
-CSS doesn't allow variables to be used in media
-queries just yet, but you can use these values
-to help you out.
+body {
+  background: #EEEEEE;
+  font-family: 'Alata', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
-	--size-xs: 320px;
-	--size-sm: 480px;
-	--size-md: 768px;
-	--size-lg: 1024px;
-	--size-xl: 1200px;
-*/
+span{
+  font-family: 'Alata', sans-serif;
+  color: black;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  min-height: 400px;
+  padding: 30px;
+  background-color: white;
+  border: 2.5px solid black; /* Draggable border */
+  box-shadow: 2px 5px 4px rgba(0,0,0,0.5);   border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(270deg, #85C1E9, #E59866, #F2F3F4);
+  background-size: 600% 600%;
+  animation: Gradient 15s ease infinite;
+}
+
+/* Define the animation keyframes */
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 h1 {
-	color: var(--color-primary);
+  color: #0032a9;
+  text-align: center;
+  margin-bottom: 36px;
 }
 
-/* This uses the same value as --size-xs. */
-@media screen and (width >= 320px) {
-	.content-container {
-		margin: 0 auto;
-		max-width: 768px;
-	}
-}
-
-
- .button-link-Fine {
-	transition: all 0.5s;
-	font-size: 17px;
-	padding: 1ch 2ch;
-	background-color: white;
-	color: #000;
-	font-family: Roboto, sans-serif;
-	border: none;
-	border-radius: 2px;
-	box-shadow: 2px 2px 0px hsl(0, 0%, 90%),
-	  4px 4px 0px hsl(0, 0%, 80%),
-	  6px 6px 0px hsl(0, 0%, 70%),
-	  8px 8px 0px hsl(0, 0%, 60%),
-	  10px 10px 0px hsl(0, 0%, 50%),
-	  12px 12px 0px hsl(0, 0%, 40%),
-	  14px 14px 0px hsl(0, 0%, 30%),
-	  16px 16px 0px hsl(0, 0%, 20%),
-	  18px 18px 0px hsl(0, 0%, 10%);
- }
-
- .button-link-Fine:hover {
-	background-color: hsl(0, 0%, 50%);
-	color: #fff;
-	box-shadow: none;
- }
-
-
- .button-link-Later {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
- }
-
-
- .button-link-Tomorrow  {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
- }
-
-
- .button-link-InABit {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 10px;
-	background-color: #f44336;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 5px;
-	font-weight: bold;
- }
-
-
- *{
-  padding: 0;
-  margin: 0;
-}
-
-body{
-  background: #f1f1f1;
-  background-image: linear-gradient(
-      90deg,
-      transparent 50px,
-      #ffb4b8 50px,
-      #ffb4b8 52px,
-      transparent 52px
-    ),
-    linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
-    background-size: 100% 30px;
-    font-family: "Architects Daughter";
-    font-size: 24px;
-}
-
-.main-container{
-  width: 95%;
-  margin: auto;
-}
-
-button {
-  font-family: monospace;
-  font-size: 1.5rem;
-  color: #FAFAFA;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid #FAFAFA;
-  background: #252525;
-  box-shadow: 3px 3px #fafafa;
-  cursor: pointer;
-  margin: 35px 0;
-}
-
-button:active {
-  box-shadow: none;
-  transform: translate(3px, 3px);
-}
-
-.container1{
-  margin-left: 5%;
-}
-
-.container2{
+.input-container {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-left: 5%;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 
-.container3{
-  display: none;
-  position: absolute;
-  top: 26%;
-  left: 40%;
-}
-
-textarea{
-  box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+.todo-input {
+  flex: 1;
   outline: none;
+  padding: 10px 10px 10px 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 30px;
+  color: black;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.todo-input::placeholder {
+  color: black; /*Add new task... color*/
+}
+
+.add-button {
   border: none;
-  width: 275px;
-  heightL 275px;
-  padding: 40px 25px 25px 25px;
+  outline: none;
+  background: #F57C00;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
 }
 
-svg{
-  color: gray;
+.empty-image {
+  border-radius: 20px;
+  height: 60%;
+  opacity: 50%;
+  margin: 55px auto 0;
+  display: block;
 }
 
-#check-icon{
+.todo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #F57C00;
+  transition: all 0.2s ease;
+}
+
+.todo:first-child {
+  margin-top: 0;
+}
+
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.todo:hover {
+  background-color: #F8B88B;
+}
+
+.todo label {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #eee;
+}
+
+.todo span {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+span::before {
+  content: "";
+  height: 20px;
+  width: 20px;
   position: absolute;
-  right: 15%;
-  bottom: 83%;
+  margin-left: -30px;
+  border-radius: 100px;
+  border: 2px solid #e6b7eca1;
 }
 
-#x-icon{
-  position: absolute;
-  right: 5%;
-  top: 4%;
+input[type='checkbox'] {
+  visibility: hidden;
+}
+
+input:checked + span {
+  text-decoration: line-through
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before {
+  background: url(./check.svg) 50% 50% no-repeat #09bb21;
+  border-color: #09bb21;
+}
+
+.todo:hover span::before {
+  border-color: #eee;
+}
+
+.todo .delete-btn  {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #eee;
+  font-size: 24px;
+}
+
+.todos-container  {
+  height: 300px;
+  overflow: overlay;
+}
+
+.todos-container::-webkit-scrollbar-track  {
+  background: rgb(247, 247, 247);
+  border-radius: 20px
+}
+
+.todos-container::-webkit-scrollbar  {
+  width: 0;
+}
+
+.todos-container:hover::-webkit-scrollbar  {
+  width: 7px;
+}
+
+.todos-container::-webkit-scrollbar-thumb  {
+  background: #d5d5d5;
+  border-radius: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.filter {
+  color: black;
+  padding: 5px 15px;
+  border-radius: 100px;
+  border: 2px solid #F57C00;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter.active, .filter:hover {
+  background-color: #F57C00;
+}
+
+.delete-all {
+  display: flex;
+  color: #A50104;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #F57C00;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.delete-all:hover {
+  border-radius: 5px;
+  background-color: #1F45FC;
 }
