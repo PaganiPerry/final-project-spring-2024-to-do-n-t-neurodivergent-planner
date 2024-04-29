@@ -10,24 +10,37 @@
   <link rel = "stylesheet" href = "css/tomorrowStyle.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Todo List</h1>
-    <div class="input-container">
-      <input class="todo-input" placeholder="Add a new task...">
-      <button class="add-button">
-        <i class="fa fa-plus-circle"></i>
-      </button>
-    </div>
-    <div class="filters">
-      <div class="filter" data-filter="completed">Complete</div>
-      <div class="filter" data-filter="pending">Incomplete</div>
-      <div class="delete-all">Delete All</div>
-    </div>
-    <div class="todos-container">
-      <ul class="todos"></ul>
-      <img class="empty-image" src="https://cdn.geckoandfly.com/wp-content/uploads/2017/05/office-politics-sarcastic-quotes-12.jpg">
-    </div>
-  </div>
+	<div class="container">
+	  <h1>Todo List</h1>
+	  <div class="input-container">
+		 <input class="todo-input" placeholder="Add a new task...">
+		 <button class="add-button">
+			<i class="fa fa-plus-circle"></i>
+		 </button>
+	  </div>
+	  <div class="filters">
+		 <div class="filter" data-filter="completed">Complete</div>
+		 <div class="filter" data-filter="pending">Incomplete</div>
+		 <div class="delete-all">Delete All</div>
+	  </div>
+	  <div class="todos-container">
+		 <ul class="todos"></ul>
+		 <img class="empty-image" src="https://cdn.geckoandfly.com/wp-content/uploads/2017/05/office-politics-sarcastic-quotes-12.jpg">
+	  </div>
+	  <div class="menu-button">
+		<button class="button-dropdown-menu">menu <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
+			<path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1m9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/></svg>
+		</button>
+		<div class="dropdown-content">
+			<a id="home-dropdown" href="index.html">Home</a>
+			<a href="Fine.html">Fine (calendar)</a>
+			<a href="Tomorrow.html">Tomorrow (to-do list)</a>
+			<a href="Later.html">Later (alarm/reminder)</a>
+			<a href="In a Bit.html">In A Bit (Sticky notes)</a>
+			<a id="other-dropdown" href="#">Other</a>
+		</div>
+	</div>
+	</div>
   <script src="js/tomorrowScripts.js"></script>
 </body>
 </html>

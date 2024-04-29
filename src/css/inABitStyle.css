@@ -1,5 +1,5 @@
-.header {
-	padding: 60px;
+.container-head {
+	padding: 25px;
 	text-align: left;
 	color: black;
 	font-size: 30px;
@@ -93,4 +93,79 @@
 
  .sticky-note.selected {
 	border: 2px solid red; /* Example style for selected sticky notes */
+ }
+
+ /*Menu Button*/
+ .menu-button {
+	position: relative;
+	display: flex; /* Use flexbox to center the content inside the button */
+	justify-content: center; /* Center the content horizontally */
+	align-items: 50%; /* Center the content vertically */
+	margin: 5px;
+	transform: none;
+ }
+
+ .button-dropdown-menu {
+	font-family: 'Alata', sans-serif;
+	background-color: #212121;
+	color: white;
+	padding: 3px 10px;
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px solid #F57C00;
+	border-radius: 15px;
+	box-shadow: 2px 5px 4px rgba(0,0,0,0.5);
+	cursor: pointer;
+ }
+
+ .button-dropdown-menu svg {
+	font-size: 15px; /* Set the font-size of SVG to match the button text */
+	vertical-align: middle; /* Align the SVG vertically with the text */
+ }
+
+ .dropdown-content {
+	display: none;
+	font-size: 13px;
+	position: absolute;
+	z-index: 1;
+	min-width: 200px;
+	background-color: #212121;
+	border: 2px solid #0032a9;
+	border-radius: 0px 15px 15px 15px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
+
+ .dropdown-content a {
+	font-family: 'Alata', sans-serif;
+	color: #F57C00;
+	padding: 8px 10px;
+	text-decoration: none;
+	display: block;
+	transition: 0.1s;
+ }
+
+ .dropdown-content a:hover {
+	background-color: #EEEEEE;
+	color: #212121;
+ }
+
+ .dropdown-content a:focus {
+	background-color: #212121;
+	color: #4CAF50;
+ }
+
+ .dropdown-content #top:hover {
+	border-radius: 0px 13px 0px 0px;
+ }
+
+ .dropdown-content #bottom:hover {
+	border-radius: 0px 0px 13px 13px;
+ }
+
+ .menu-button:hover button-dropdown-menu {
+	border-radius: 15px 15px 0px 0px;
+ }
+
+ .menu-button:hover .dropdown-content {
+	display: block;
  }

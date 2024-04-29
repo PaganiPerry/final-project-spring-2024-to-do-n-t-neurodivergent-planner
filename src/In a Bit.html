@@ -12,27 +12,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Alata&family=Caveat:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Odibee+Sans&display=swap" rel="stylesheet">
 <link rel = "stylesheet" href = "css/inABitStyle.css"/>
 
-
-
 </head>
 <body>
-  <div class="header">
-    <h1>your thoughts...that you KNOW you'll forget?</h1>
-    <h5>just press "S" or "s" to have them, visually, forever.</h5>
-  </div>
-
-
-  <div id="board"></div>
-
-  <div id="customContextMenu" class="custom-context-menu">
-    <ul>
-      <li id="deleteNote">Delete this note</li>
-      <li id = "deleteMultiple">Delete multiple</li>
-      <li id="deleteSelected">Delete selected notes</li>
-
-    </ul>
-  </div>
-
-  <script src="script.js"></script>
+<div class="container-head">
+	<h1>your thoughts...that you KNOW you'll forget?</h1>
+	<h5>just press "S" or "s" to have them, visually, forever.</h5>
+	<div class="menu-button">
+		<button class="button-dropdown-menu">menu <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
+			<path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1m9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/></svg>
+		</button>
+		<div class="dropdown-content">
+			<a id="Home-dropdown" href="index.html">Home</a>
+			<a href="Fine.html">Fine (calendar)</a>
+			<a href="Tomorrow.html">Tomorrow (to-do list)</a>
+			<a href="Later.html">Later (alarm/reminder)</a>
+			<a href="In a Bit.html">In A Bit (Sticky notes)</a>
+			<a id="other-dropdown" href="#">Other</a>
+		</div>
+	</div>
+</div>
+	<div id="board"></div>
+	<div id="customContextMenu" class="custom-context-menu">
+	  <ul>
+		 <li id="deleteNote">Delete this note</li>
+		 <li id = "deleteMultiple">Delete multiple</li>
+		 <li id="deleteSelected">Delete selected notes</li>
+	  </ul>
+	</div>
+	<script src="inABitScripts.js"></script>
 </body>
 </html>

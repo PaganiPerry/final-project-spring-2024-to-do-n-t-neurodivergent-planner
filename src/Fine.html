@@ -7,7 +7,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport"
 		content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alata&family=Caveat:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Odibee+Sans&display=swap" rel="stylesheet">
@@ -17,85 +16,96 @@
 	 </head>
 
 	 <body>
-		 <!-- Main wrapper for the calendar application -->
-		 <div class="wrapper">
-			 <div class="container-calendar">
-				 <div id="left">
-					 <h1>"Intuitive" Calendar</h1>
-					 <div id="event-section">
-						 <h3>Add Event</h3>
-						 <input type="date" id="eventDate">
-						 <input type="text"
-							 id="eventTitle"
-							 placeholder="Event Title">
-						 <input type="text"
-							 id="eventDescription"
-							 placeholder="Event Description">
-						 <button id="addEvent" onclick="addEvent()">
-							 Add
-						 </button>
-					 </div>
-					 <div id="reminder-section">
-						 <h3>Reminders</h3>
-						 <!-- List to display reminders -->
-						 <ul id="reminderList">
-							 <li data-event-id="1">
-								 <strong>Event Title</strong>
-								 - Event Description on Event Date
-								 <button class="delete-event"
-									 onclick="deleteEvent(1)">
-									 Delete
-								 </button>
-							 </li>
-						 </ul>
-					 </div>
-				 </div>
-				 <div id="right">
-					 <h3 id="monthAndYear"></h3>
-					 <div class="button-container-calendar">
-						 <button id="previous"
-								 onclick="previous()">
-							 ‹
-						 </button>
-						 <button id="next"
-								 onclick="next()">
-							 ›
-						 </button>
-					 </div>
-					 <table class="table-calendar"
-						 id="calendar"
-						 data-lang="en">
-						 <thead id="thead-month"></thead>
-						 <!-- Table body for displaying the calendar -->
-						 <tbody id="calendar-body"></tbody>
-					 </table>
-					 <div class="footer-container-calendar">
-						 <label for="month">Jump To: </label>
-						 <!-- Dropdowns to select a specific month and year -->
-						 <select id="month" onchange="jump()">
-							 <option value=0>Jan</option>
-							 <option value=1>Feb</option>
-							 <option value=2>Mar</option>
-							 <option value=3>Apr</option>
-							 <option value=4>May</option>
-							 <option value=5>Jun</option>
-							 <option value=6>Jul</option>
-							 <option value=7>Aug</option>
-							 <option value=8>Sep</option>
-							 <option value=9>Oct</option>
-							 <option value=10>Nov</option>
-							 <option value=11>Dec</option>
-						 </select>
-						 <!-- Dropdown to select a specific year -->
-						 <select id="year" onchange="jump()"></select>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-		 <!-- Include the JavaScript file for the calendar functionality -->
-		 <script src="./script.js"></script>
-		 <link rel = "JavaScript" href = "js/fineScripts.js"/>
+		<!-- Main wrapper for the calendar application -->
+		<div class="wrapper">
+			<div class="container-calendar">
+				<div id="left">
+					<h1>"Intuitive" Calendar</h1>
+					<div id="event-section">
+						<h3>Add Event</h3>
+						<input type="date" id="eventDate">
+						<input type="text"
+							id="eventTitle"
+							placeholder="Event Title">
+						<input type="text"
+							id="eventDescription"
+							placeholder="Event Description">
+						<button id="addEvent" onclick="addEvent()">
+							Add
+						</button>
+					</div>
+					<div id="reminder-section">
+						<h3>Reminders</h3>
+						<!-- List to display reminders -->
+						<ul id="reminderList">
+							<li data-event-id="1">
+								<strong>Event Title</strong>
+								- Event Description on Event Date
+								<button class="delete-event"
+									onclick="deleteEvent(1)">
+									Delete
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="right">
+					<h3 id="monthAndYear"></h3>
+					<div class="button-container-calendar">
+						<button id="previous"
+								onclick="previous()">
+							‹
+						</button>
+						<button id="next"
+								onclick="next()">
+							›
+						</button>
+					</div>
+					<table class="table-calendar"
+						id="calendar"
+						data-lang="en">
+						<thead id="thead-month"></thead>
+						<!-- Table body for displaying the calendar -->
+						<tbody id="calendar-body"></tbody>
+					</table>
+					<div class="footer-container-calendar">
+						<label for="month">Jump To: </label>
+						<!-- Dropdowns to select a specific month and year -->
+						<select id="month" onchange="jump()">
+							<option value=0>Jan</option>
+							<option value=1>Feb</option>
+							<option value=2>Mar</option>
+							<option value=3>Apr</option>
+							<option value=4>May</option>
+							<option value=5>Jun</option>
+							<option value=6>Jul</option>
+							<option value=7>Aug</option>
+							<option value=8>Sep</option>
+							<option value=9>Oct</option>
+							<option value=10>Nov</option>
+							<option value=11>Dec</option>
+						</select>
+						<!-- Dropdown to select a specific year -->
+						<select id="year" onchange="jump()"></select>
+					</div>
+				</div>
+				<div class="menu-button">
+					<button class="button-dropdown-menu">menu <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
+						<path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1m9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/></svg>
+					</button>
+					<div class="dropdown-content">
+						<a id="Home-dropdown" href="index.html">Home</a>
 
-	 </body>
-	 </html>
+						<a href="Fine.html">Fine (calendar)</a>
+						<a href="Tomorrow.html">Tomorrow (to-do list)</a>
+						<a href="Later.html">Later (alarm/reminder)</a>
+						<a href="In a Bit.html">In A Bit (Sticky notes)</a>
+						<a id="other-dropdown" href="#">Other</a>
+					</div>
+				</div>
+		 </div>
+		</div>
+		<script src="js/fineScripts.js"></script>
+</body>
+</html>
 
