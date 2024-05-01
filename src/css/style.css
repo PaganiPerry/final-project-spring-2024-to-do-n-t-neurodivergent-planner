@@ -85,9 +85,9 @@ body {
 	outline: none;
  }
 
- .center-card-button:hover {
+ /*.center-card-button:hover {
 	background-color: red;
- }
+ }*/
 
  .card1 {
 	color: white;
@@ -197,4 +197,85 @@ body {
 
  .card4:hover .bi bi-alarm-fill {
 	fill: white;
+ }
+
+
+
+
+ .form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: #EEEEEE;
+	padding: 3.5em;
+	border-radius: 175px;
+	transition: 0.4s ease-in-out;
+	box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+	width: 15vh;
+	height: 25vh; /* Full height of the viewport */
+	margin: 10px;
+ }
+
+ .form:hover {
+	transform: translateX(-0.5em) translateY(-0.5em);
+	border: 1px solid #171717;
+	box-shadow: 10px 10px 0px #666666;
+ }
+
+ .heading {
+	color: #0032a9;
+	padding-bottom: 2em;
+	text-align: center;
+	font-weight: bold;
+	padding: 1px;
+ }
+
+ .input {
+	border-radius: 5px;
+	border: 1px solid whitesmoke;
+	background-color: whitesmoke;
+	outline: none;
+	padding: 0.7em;
+	transition: 0.4s ease-in-out;
+ }
+
+ .input:hover {
+	box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+ }
+
+ .input:focus {
+	background: #ffffff;
+	box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .button-container-login-register {
+	display: flex;
+	justify-content: center;
+	gap: 20px; /* Space between buttons */
+	margin-top: 1em;
+ }
+
+ .btn-register,
+ .btn-login {
+	padding: 0.7em 1em;
+	border-radius: 10px;
+	border: none;
+	color: black;
+	transition: 0.4s ease-in-out;
+	box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+	width: ;
+	height: ;
+ }
+
+ .btn-register:hover,
+ .btn-login:hover {
+	box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+	transform: translateX(-0.5em) translateY(-0.5em);
+ }
+
+ .btn-register:active,
+ .btn-login:active {
+	transition: 0.2s;
+	transform: translateX(0em) translateY(0em);
+	box-shadow: none;
  }

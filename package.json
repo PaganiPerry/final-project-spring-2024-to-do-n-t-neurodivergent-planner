@@ -31,13 +31,16 @@
     "eslint": "^8.43.0",
     "file-loader": "^6.2.0",
     "gh-pages": "^5.0.0",
-    "live-server": "^1.2.2",
+    "live-server": "^1.1.0",
     "stylelint": "^15.8.0",
     "stylelint-config-standard": "^34.0.0"
   },
   "dependencies": {
-    "cm523-unit-tests": "github:ProfessorKolodziej/cm523-unit-tests",
     "@profkexplains/htmlvalidate": "file:config/htmlvalidate",
+    "cm523-unit-tests": "github:ProfessorKolodziej/cm523-unit-tests",
+    "firebase": "^10.11.1",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^4.9.0",
     "html-validate": "^8.0.5",
     "jest": "^29.5.0"
   },
@@ -73,7 +76,12 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
-      "media-feature-range-notation": [ "context", { "severity": "warning" }]
+      "media-feature-range-notation": [
+        "context",
+        {
+          "severity": "warning"
+        }
+      ]
     }
   }
 }

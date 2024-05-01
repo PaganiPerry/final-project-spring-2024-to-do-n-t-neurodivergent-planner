@@ -5,12 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <link rel = "stylesheet" href = "css/style.css"/>
-
 <!--CSS-->
 </head>
 <body>
+
+	<form class="form">
+    <p class="heading">Login</p>
+    <input type="email"  id = 'email' placeholder="Email" class="input" autocomplete="off" /> <!-- New input field for Email -->
+    <input type="text" id = 'full_name' placeholder="Username/Name" class="input"/>
+    <input type="password" id = 'password' placeholder="Password" class="input" />
+    <div class="button-container-login-register"> <!-- Container for the buttons -->
+		<button class="btn-register" onclick="event.preventDefault(); register();">Register</button>
+		<button class="btn-login" onclick="event.preventDefault(); login();">Login</button>
+
+    </div>
+  </form>
+
   <div class="main">
     <div class="up">
 		<a href="Fine.html" class="card-link">
@@ -30,9 +41,10 @@
 		</a>
 
     </div>
-    <div class="center-card">
+
+    <!--<div class="center-card">
       <button class="center-card-button">+</button>
-    </div>
+    </div>-->
 
     <div class="down">
 		<a href="In A Bit.html" class="card-link">
@@ -52,5 +64,11 @@
 		</a>
     </div>
   </div>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js"></script>
+
+  <script src="js/homeScripts.js"></script>
+
 </body>
 </html>
