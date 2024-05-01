@@ -16,6 +16,7 @@ body {
   background: url(./background.jpg) no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url("https://cdn2.geckoandfly.com/wp-content/uploads/2017/05/office-politics-sarcastic-quotes-10.jpg");
 }
 
 span{
@@ -35,6 +36,7 @@ span{
   background: linear-gradient(270deg, #85C1E9, #E59866, #F2F3F4);
   background-size: 600% 600%;
   animation: Gradient 15s ease infinite;
+  opacity: 0.90;
 }
 
 /* Define the animation keyframes */

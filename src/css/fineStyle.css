@@ -4,12 +4,14 @@ body {
 	font-family: "Alata", sans-serif;
 	background-color: white;
 	margin: 0;
+	background-image: url("https://www.geckoandfly.com/wp-content/uploads/2017/05/office-politics-sarcastic-quotes-06.jpg");
 }
 
 .wrapper {
 	max-width: 100vh;
 	margin: auto;
   transform: none;
+  opacity: 0.85;
 }
 
 /* Calendar container */

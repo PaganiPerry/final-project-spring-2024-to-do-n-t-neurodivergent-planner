@@ -9,6 +9,7 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	margin: 0;
+	background-image: url("https://cdn4.geckoandfly.com/wp-content/uploads/2017/05/office-politics-sarcastic-quotes-04.jpg");
 }
 
 .clock {
@@ -24,6 +25,7 @@ body {
 	background: linear-gradient(270deg, #85C1E9, #E59866, #F2F3F4);
 	background-size: 600% 600%;
 	animation: Gradient 15s ease infinite;
+	opacity: 0.85;
 }
 
 /* Define the animation keyframes */
