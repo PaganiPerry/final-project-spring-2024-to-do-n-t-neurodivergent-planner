@@ -202,19 +202,25 @@ body {
 
 
 
+ p {
+	margin: 10px auto;
+	font-family: 'Atlata', sans-serif;
+ }
+
  .form {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 5px;
 	background-color: #EEEEEE;
-	padding: 3.5em;
-	border-radius: 175px;
+	padding: 1em; /* Adjusted padding */
+	border-radius: 25%; /* This will create a circle */
 	transition: 0.4s ease-in-out;
 	box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
-	width: 15vh;
-	height: 25vh; /* Full height of the viewport */
-	margin: 10px;
+	width: 475px; /* Adjusted width */
+	height: 225px; /* Height equal to the width for a perfect circle */
+	/* Other styles remain unchanged */
  }
+
 
  .form:hover {
 	transform: translateX(-0.5em) translateY(-0.5em);
@@ -231,12 +237,14 @@ body {
  }
 
  .input {
+	width: 50%;
 	border-radius: 5px;
 	border: 1px solid whitesmoke;
 	background-color: whitesmoke;
 	outline: none;
 	padding: 0.7em;
 	transition: 0.4s ease-in-out;
+	margin: 1px auto;
  }
 
  .input:hover {
@@ -263,8 +271,6 @@ body {
 	color: black;
 	transition: 0.4s ease-in-out;
 	box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
-	width: ;
-	height: ;
  }
 
  .btn-register:hover,
@@ -279,3 +285,4 @@ body {
 	transform: translateX(0em) translateY(0em);
 	box-shadow: none;
  }
+

@@ -1,11 +1,7 @@
 
-
-
-
-
 console.log("JavaScript is linked!");
 
-const firebaseConfig = {
+let firebaseConfig = {
 	apiKey: "AIzaSyDLx8YWsKy8Webah6CtzMes28RWdmdxs2M",
 	authDomain: "planner-login-with-firebase-db.firebaseapp.com",
 	projectId: "planner-login-with-firebase-db",
@@ -13,6 +9,12 @@ const firebaseConfig = {
 	messagingSenderId: "867348618218",
 	appId: "1:867348618218:web:c0f16e87a2770c789c7093"
  };
+
+if (location.hostname === 'localhost'){
+	firebaseConfig = {
+		databaseURL: 'http://localhost:8080?ns=emulatorui'
+	}
+}
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig)

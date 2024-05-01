@@ -9,19 +9,6 @@
 <!--CSS-->
 </head>
 <body>
-
-	<form class="form">
-    <p class="heading">Login</p>
-    <input type="email"  id = 'email' placeholder="Email" class="input" autocomplete="off" /> <!-- New input field for Email -->
-    <input type="text" id = 'full_name' placeholder="Username/Name" class="input"/>
-    <input type="password" id = 'password' placeholder="Password" class="input" />
-    <div class="button-container-login-register"> <!-- Container for the buttons -->
-		<button class="btn-register" onclick="event.preventDefault(); register();">Register</button>
-		<button class="btn-login" onclick="event.preventDefault(); login();">Login</button>
-
-    </div>
-  </form>
-
   <div class="main">
     <div class="up">
 		<a href="Fine.html" class="card-link">
@@ -42,9 +29,16 @@
 
     </div>
 
-    <!--<div class="center-card">
-      <button class="center-card-button">+</button>
-    </div>-->
+	 <form class="form">
+		<p class="heading">Login</p>
+		<input type="text" placeholder="Email" class="input" /> <!-- New input field for Email -->
+		<input type="text" placeholder="Username/Name" class="input"/>
+		<input type="text" placeholder="Password" class="input" />
+		<div class="button-container-login-register"> <!-- Container for the buttons -->
+		  <button class="btn-register">Register</button>
+		  <button class="btn-login">Login</button>
+		</div>
+	 </form>
 
     <div class="down">
 		<a href="In A Bit.html" class="card-link">
